@@ -1,0 +1,68 @@
+body {
+    background-image: url('https://example.com/background.jpg'); /* Ganti dengan URL background mewah */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    overflow: hidden; /* Supaya partikel tidak keluar dari halaman */
+}
+.card-custom {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 15px;
+    animation: fadeIn 2s ease-in;
+}
+.birthday-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: gold;
+    animation: slideIn 1.5s ease-out;
+}
+.btn-custom {
+    background-color: gold;
+    color: black;
+    border-radius: 30px;
+    padding: 10px 30px;
+    animation: bounceIn 2s ease;
+}
+.carousel-item img {
+    border-radius: 15px;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideIn {
+    from { transform: translateY(-100px); }
+    to { transform: translateY(0); }
+}
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+@keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+/* Responsif untuk HP */
+@media (max-width: 576px) {
+    .birthday-text {
+        font-size: 2rem; /* Ukuran font lebih kecil untuk layar HP */
+    }
+    .card-custom {
+        padding: 2rem; /* Padding lebih kecil di layar kecil */
+    }
+    .btn-custom {
+        padding: 8px 20px; /* Tombol lebih kecil di layar kecil */
+    }
+    .carousel-item img {
+        border-radius: 10px;
+        height: 200px; /* Ukuran gambar lebih kecil agar sesuai dengan layar */
+    }
+    p.lead {
+        font-size: 1rem; /* Ukuran teks lebih kecil di layar kecil */
+    }
+}
